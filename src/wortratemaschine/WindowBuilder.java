@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package wortratemaschine;
 
 import javafx.application.Application;
@@ -15,15 +10,15 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 /**
- *
- * @author Andreas
+ * Applikation, welche ein Wort errät und dabei die Anzahl der Versuche und die
+ * Zeit anzeigt.
+ * 
+ * @author Andreas, Christoph
  */
 public class WindowBuilder extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLDocumentController controller = new FXMLDocumentController();
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
@@ -41,12 +36,7 @@ public class WindowBuilder extends Application {
         
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
-
     }
-   
 }
